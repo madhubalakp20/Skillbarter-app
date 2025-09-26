@@ -1,0 +1,182 @@
+/* LearningPage.css */
+
+.learning-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #f1cccc, #c0e2e6);
+  min-height: 100vh;
+  padding-top: 100px; /* space for navbar */
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.learning-container {
+  width: 95%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 30px;
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Headings */
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #00796b;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 30px 0 15px;
+  text-align: center;
+  color: #004d40;
+}
+
+/* Paragraphs */
+p {
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #004d40;
+}
+
+/* Tips Section */
+.tips-section {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.tips-section ul {
+  list-style-type: disc;
+  padding-left: 30px;
+  color: #00695c;
+  max-height: 200px; /* scrollable area */
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.tips-section li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+/* Partner Section */
+.partners-section {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.partner-cards {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto; /* horizontal scroll */
+  padding-bottom: 15px;
+  justify-content: center;
+}
+
+.partner-card {
+  flex: 0 0 220px; /* fixed width for scroll */
+  background: linear-gradient(145deg, #b2dfdb, #e0f2f1);
+  padding: 20px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.partner-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.partner-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #004d40;
+}
+
+.partner-card p {
+  margin: 6px 0;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Buttons */
+button {
+  background-color: #00796b;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+button:hover {
+  background-color: #004d40;
+}
+
+/* Teach Section */
+.teach-section {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.teach-section textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #b2dfdb;
+  resize: vertical;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.teach-section button {
+  width: 50%;
+  min-width: 150px;
+  font-weight: bold;
+}
+
+/* Scrollbar Styling */
+.partner-cards::-webkit-scrollbar,
+.tips-section ul::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+.partner-cards::-webkit-scrollbar-thumb,
+.tips-section ul::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
+
+.partner-cards::-webkit-scrollbar-track,
+.tips-section ul::-webkit-scrollbar-track {
+  background-color: rgba(0,0,0,0.05);
+  border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .partner-cards {
+    gap: 15px;
+  }
+  .partner-card {
+    flex: 0 0 180px;
+  }
+}

@@ -1,0 +1,120 @@
+/* Page setup */
+.page {
+  padding-top: 90px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #c5e3e8, #f3f8f4);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container {
+  width: min(900px, 92%);
+  margin: 40px auto;
+  text-align: center;
+}
+
+/* Page title */
+.page-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a365d;
+  margin-bottom: 10px;
+}
+
+.page-desc {
+  font-size: 1rem;
+  color: #334155;
+  margin-bottom: 30px;
+}
+
+/* Contact Cards Grid */
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  grid-template-rows: repeat(2, auto);   /* 2 rows */
+  gap: 20px;
+}
+
+/* Individual Contact Card */
+.contact-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 25px 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease;
+  opacity: 0;
+  animation: fadeUp 0.6s forwards;
+}
+
+.contact-card:nth-child(1) { animation-delay: 0.1s; }
+.contact-card:nth-child(2) { animation-delay: 0.2s; }
+.contact-card:nth-child(3) { animation-delay: 0.3s; }
+.contact-card:nth-child(4) { animation-delay: 0.4s; }
+.contact-card:nth-child(5) { animation-delay: 0.5s; }
+.contact-card:nth-child(6) { animation-delay: 0.6s; }
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+}
+
+.contact-card .icon {
+  font-size: 3rem;
+  color: #4b79a1;
+  margin-bottom: 15px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-card:hover .icon {
+  color: #67b26f;
+  transform: scale(1.15);
+}
+
+.contact-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a365d;
+  margin-bottom: 6px;
+}
+
+.contact-card p {
+  font-size: 0.95rem;
+  color: #4a5568;
+}
+
+/* Bottom message */
+.contact-msg {
+  margin-top: 35px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #166534;
+  animation: pulse 2.5s infinite;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+/* Fade-up animation for cards */
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact-cards {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on tablets */
+    grid-template-rows: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-cards {
+    grid-template-columns: 1fr; /* 1 card per row on mobile */
+  }
+}

@@ -1,0 +1,128 @@
+/* Common Page Layout */
+.skillknown-page, .skillwanted-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #c5e7f5, #f3d9f3, #b8ccde);
+  background-size: 300% 300%;
+  animation: gradientShift 10s ease infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Progress Bar */
+.progress-bar {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+.progress-bar span {
+  color: #555;
+  padding: 5px 12px;
+  border-radius: 20px;
+  background: #fff3;
+}
+.progress-bar .active {
+  background: #4f46e5;
+  color: #fff;
+}
+.progress-bar .done {
+  background: #16a34a;
+  color: #fff;
+}
+
+/* Floating icons */
+.floating-icons span {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.15;
+  animation: float 12s linear infinite;
+}
+.floating-icons span:nth-child(1) { top: 20%; left: 15%; animation-delay: 0s; }
+.floating-icons span:nth-child(2) { top: 40%; left: 70%; animation-delay: 3s; }
+.floating-icons span:nth-child(3) { top: 70%; left: 30%; animation-delay: 6s; }
+.floating-icons span:nth-child(4) { top: 85%; left: 80%; animation-delay: 9s; }
+
+/* Floating animation */
+@keyframes float {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(10deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* Card Container */
+.skillknown-container, .skillwanted-container {
+  background: #fff;
+  border-radius: 12px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  width: 400px;
+  max-width: 90%;
+  text-align: center;
+  z-index: 1;
+}
+
+.skillknown-container h1, .skillwanted-container h1 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #ea580c;
+}
+
+.skillknown-container input, .skillwanted-container input {
+  width: 80%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.skillknown-container button, .skillwanted-container button {
+  background-color: #4f46e5;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.skillknown-container button:hover,
+.skillwanted-container button:hover {
+  background-color: #4338ca;
+}
+
+/* Trending Skills */
+.trending-skills {
+  margin-top: 30px;
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+}
+.trending-skills h3 {
+  margin-bottom: 10px;
+  color: #4f46e5;
+}
+
+/* Motivation Section */
+.motivation {
+  margin-top: 20px;
+  font-style: italic;
+  color: #555;
+  animation: fadeIn 3s infinite alternate;
+}
+@keyframes fadeIn {
+  from { opacity: 0.5; }
+  to { opacity: 1; }
+}
+
+/* Gradient Animation */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
